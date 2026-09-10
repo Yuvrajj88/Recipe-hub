@@ -1,0 +1,407 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="RecipeHub - Discover delicious and easy-to-make recipes.">
+    <title>RecipeHub | Discover Delicious Recipes</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- NAVBAR -->
+    <header class="header">
+        <nav class="navbar container">
+
+            <a href="#" class="logo">
+                <span class="logo-icon"><img src="icons/salad.png" alt=""></span>
+                Recipe<span>Hub</span>
+            </a>
+
+            <ul class="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#recipes">Recipes</a></li>
+                <li><a href="#categories">Categories</a></li>
+                <li><a href="#about">About</a></li>
+            </ul>
+
+            <form class="search-box" id="searchForm">
+                <input type="search" id="searchInput" placeholder="Search for recipes..."
+                    aria-label="Search for recipes">
+                <button type="submit" aria-label="Search"><img src="icons/search.png" alt="" class="search-img"></button>
+            </form>
+
+        </nav>
+    </header>
+
+
+    <main>
+        <!--  -->
+        <div class="recipe-box" id="recipe-box">
+            
+        </div>
+
+        <!-- HERO -->
+        <section class="hero" id="home">
+            <div class="hero-overlay"></div>
+
+            <div class="hero-content container">
+                <span class="hero-tag">🍳 Cook • Taste • Enjoy</span>
+
+                <h1>
+                    Discover
+                    <span>Delicious</span>
+                    Recipes
+                </h1>
+
+                <p>
+                    Explore mouth-watering recipes, discover new flavors,
+                    and bring delicious homemade meals to your table.
+                </p>
+
+                <a href="#recipes" class="primary-btn">
+                    Explore Recipes <span>→</span>
+                </a>
+            </div>
+        </section>
+
+
+        <!-- POPULAR RECIPES -->
+        <section class="recipes-section section" id="recipes">
+            <div class="container">
+
+                <div class="section-heading">
+                    <div>
+                        <span class="section-label">OUR FAVORITES</span>
+                        <h2>Popular Recipes</h2>
+                    </div>
+
+                    <p>
+                        Delicious recipes loved by food enthusiasts.
+                    </p>
+                </div>
+
+
+                <div class="recipe-grid" id="recipeGrid">
+
+                    <!-- Recipe 1 -->
+                    <article class="recipe-card">
+                        <div class="recipe-image">
+                            <img src="https://images.unsplash.com/photo-1565299624946-b28f40a0ae38?auto=format&fit=crop&w=800&q=80"
+                                alt="Italian pizza">
+                            <span class="recipe-badge">Popular</span>
+                        </div>
+
+                        <div class="recipe-content">
+                            <h3>Classic Italian Pizza</h3>
+
+                            <p>
+                                Crispy homemade pizza topped with tomato,
+                                mozzarella and fresh basil.
+                            </p>
+
+                            <div class="recipe-info">
+                                <span>⏱ 30 min</span>
+                                <span>● Easy</span>
+                            </div>
+
+                            <a href="#" class="recipe-btn">View Recipe →</a>
+                        </div>
+                    </article>
+
+
+                    <!-- Recipe 2 -->
+                    <article class="recipe-card">
+                        <div class="recipe-image">
+                            <img src="https://images.unsplash.com/photo-1601050690597-df0568f70950?auto=format&fit=crop&w=800&q=80"
+                                alt="Vegetable dumplings">
+                        </div>
+
+                        <div class="recipe-content">
+                            <h3>Veggie Dumplings</h3>
+
+                            <p>
+                                Soft and delicious dumplings filled with
+                                fresh vegetables and aromatic spices.
+                            </p>
+
+                            <div class="recipe-info">
+                                <span>⏱ 35 min</span>
+                                <span>● Medium</span>
+                            </div>
+
+                            <a href="#" class="recipe-btn">View Recipe →</a>
+                        </div>
+                    </article>
+
+
+                    <!-- Recipe 3 -->
+                    <article class="recipe-card">
+                        <div class="recipe-image">
+                            <img src="https://images.unsplash.com/photo-1546069901-ba9599a7e63c?auto=format&fit=crop&w=800&q=80"
+                                alt="Healthy salad bowl">
+                            <span class="recipe-badge healthy">Healthy</span>
+                        </div>
+
+                        <div class="recipe-content">
+                            <h3>Fresh Garden Salad</h3>
+
+                            <p>
+                                A colorful bowl of fresh vegetables,
+                                greens and a refreshing homemade dressing.
+                            </p>
+
+                            <div class="recipe-info">
+                                <span>⏱ 15 min</span>
+                                <span>● Easy</span>
+                            </div>
+
+                            <a href="#" class="recipe-btn">View Recipe →</a>
+                        </div>
+                    </article>
+
+
+                    <!-- Recipe 4 -->
+                    <article class="recipe-card">
+                        <div class="recipe-image">
+                            <img src="https://images.unsplash.com/photo-1551024506-0bccd828d307?auto=format&fit=crop&w=800&q=80"
+                                alt="Chocolate donuts">
+                        </div>
+
+                        <div class="recipe-content">
+                            <h3>Chocolate Donuts</h3>
+
+                            <p>
+                                Soft and fluffy donuts covered with rich
+                                chocolate glaze and sweet toppings.
+                            </p>
+
+                            <div class="recipe-info">
+                                <span>⏱ 40 min</span>
+                                <span>● Medium</span>
+                            </div>
+
+                            <a href="#" class="recipe-btn">View Recipe →</a>
+                        </div>
+                    </article>
+
+
+                    <!-- Recipe 5 -->
+                    <article class="recipe-card">
+                        <div class="recipe-image">
+                            <img src="https://images.unsplash.com/photo-1547592180-85f173990554?auto=format&fit=crop&w=800&q=80"
+                                alt="Creamy pasta">
+                            <span class="recipe-badge">Trending</span>
+                        </div>
+
+                        <div class="recipe-content">
+                            <h3>Creamy Garlic Pasta</h3>
+
+                            <p>
+                                Creamy pasta tossed with garlic, herbs and
+                                parmesan for a comforting meal.
+                            </p>
+
+                            <div class="recipe-info">
+                                <span>⏱ 25 min</span>
+                                <span>● Easy</span>
+                            </div>
+
+                            <a href="#" class="recipe-btn">View Recipe →</a>
+                        </div>
+                    </article>
+
+
+                    <!-- Recipe 6 -->
+                    <article class="recipe-card">
+                        <div class="recipe-image">
+                            <img src="https://images.unsplash.com/photo-1601050690117-94f5f6fa8bd7?auto=format&fit=crop&w=800&q=80"
+                                alt="Pancakes with berries">
+                        </div>
+
+                        <div class="recipe-content">
+                            <h3>Berry Pancakes</h3>
+
+                            <p>
+                                Fluffy pancakes served with fresh berries
+                                and a drizzle of sweet maple syrup.
+                            </p>
+
+                            <div class="recipe-info">
+                                <span>⏱ 20 min</span>
+                                <span>● Easy</span>
+                            </div>
+
+                            <a href="#" class="recipe-btn">View Recipe →</a>
+                        </div>
+                    </article>
+
+                </div>
+            </div>
+        </section>
+
+
+        <!-- CATEGORIES -->
+        <section class="categories-section section" id="categories">
+            <div class="container">
+
+                <div class="section-heading centered">
+                    <span class="section-label">EXPLORE BY TYPE</span>
+                    <h2>Recipe Categories</h2>
+
+                    <p>
+                        Find the perfect recipe for every occasion.
+                    </p>
+                </div>
+
+
+                <div class="category-grid">
+
+                    <a href="#" class="category-card">
+                        <div class="category-icon">🍳</div>
+                        <h3>Breakfast</h3>
+                        <p>Start your day right</p>
+                    </a>
+
+                    <a href="#" class="category-card">
+                        <div class="category-icon">🥗</div>
+                        <h3>Lunch</h3>
+                        <p>Fresh midday meals</p>
+                    </a>
+
+                    <a href="#" class="category-card">
+                        <div class="category-icon">🍝</div>
+                        <h3>Dinner</h3>
+                        <p>Perfect evening meals</p>
+                    </a>
+
+                    <a href="#" class="category-card">
+                        <div class="category-icon">🍰</div>
+                        <h3>Desserts</h3>
+                        <p>Sweet treats</p>
+                    </a>
+
+                    <a href="#" class="category-card">
+                        <div class="category-icon">🥦</div>
+                        <h3>Vegetarian</h3>
+                        <p>Healthy & delicious</p>
+                    </a>
+
+                    <a href="#" class="category-card">
+                        <div class="category-icon">🥤</div>
+                        <h3>Drinks</h3>
+                        <p>Refreshing beverages</p>
+                    </a>
+
+                </div>
+            </div>
+        </section>
+
+
+        <!-- ABOUT -->
+        <section class="about-section section" id="about">
+            <div class="container about-container">
+
+                <div class="about-image">
+                    <img src="https://images.unsplash.com/photo-1556910103-1c02745aae4d?auto=format&fit=crop&w=1000&q=80"
+                        alt="Cooking food in a kitchen">
+                </div>
+
+                <div class="about-content">
+                    <span class="section-label">ABOUT RECIPEHUB</span>
+
+                    <h2>Good Food Brings People Together</h2>
+
+                    <p>
+                        RecipeHub is a place for food lovers to discover
+                        simple, delicious and inspiring recipes for every
+                        occasion.
+                    </p>
+
+                    <p>
+                        Whether you're preparing breakfast for your family
+                        or planning a special dinner, discover recipes that
+                        make cooking enjoyable.
+                    </p>
+
+                    <a href="#recipes" class="primary-btn">
+                        Start Cooking <span>→</span>
+                    </a>
+                </div>
+
+            </div>
+        </section>
+
+    </main>
+
+
+    <!-- FOOTER -->
+    <footer class="footer">
+
+        <div class="container footer-container">
+
+            <div class="footer-about">
+                <a href="#" class="logo footer-logo">
+                    <span class="logo-icon">🍴</span>
+                    Recipe<span>Hub</span>
+                </a>
+
+                <p>
+                    Discover delicious recipes and make every meal
+                    memorable. Cook something amazing today!
+                </p>
+            </div>
+
+
+            <div class="footer-links">
+                <h3>Quick Links</h3>
+
+                <a href="#home">Home</a>
+                <a href="#recipes">Recipes</a>
+                <a href="#categories">Categories</a>
+                <a href="#about">About Us</a>
+            </div>
+
+
+            <div class="footer-links">
+                <h3>Categories</h3>
+
+                <a href="#">Breakfast</a>
+                <a href="#">Lunch</a>
+                <a href="#">Dinner</a>
+                <a href="#">Desserts</a>
+            </div>
+
+
+            <div class="footer-links">
+                <h3>Follow Us</h3>
+
+                <div class="social-links">
+                    <a href="#" aria-label="Instagram">Instagram</a>
+                    <a href="#" aria-label="Facebook">Facebook</a>
+                    <a href="#" aria-label="Pinterest">Pinterest</a>
+                </div>
+            </div>
+
+        </div>
+
+
+        <div class="footer-bottom">
+            <p>
+                © 2026 RecipeHub. All rights reserved.
+            </p>
+        </div>
+
+    </footer>
+
+</body>
+<script src="script.js"></script>
+</html>
