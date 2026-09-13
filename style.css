@@ -176,9 +176,9 @@ input {
 .recipe-box{
     position: fixed;
     display: flex;
-    right: 25vw;
+    right: 10vw;
     top: 15vh;
-    width: 50vw;
+    width: 80vw;
     max-height: 70vh;
     z-index: 5;
     color:#e85d04;
@@ -189,6 +189,7 @@ input {
     padding: 20px;
     overflow-y: scroll;
     display: none;
+    z-index: 15;
 }
 .recipe-box::-webkit-scrollbar{
     width: 0px;
@@ -208,7 +209,7 @@ input {
 }
 .cross-btn{
     position: fixed;
-    right: 380px;
+    right: 12vw;
     width: 50px;
     cursor: pointer;
     background-color: #e85d04;
