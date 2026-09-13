@@ -836,7 +836,23 @@ input {
     }
 }
 
+.instructions {
+  list-style: none;
+  padding: 0;
+}
 
+.instructions li {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  margin-bottom: 18px;
+  line-height: 1.6;
+}
+
+
+.recipe-detail-image{
+    width: 200px;
+}
 /* 
    SMALL MOBILE
  */
