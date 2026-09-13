@@ -121,6 +121,7 @@ async function showRecipe(id) {
 
     const meal = data.meals[0];
 
+    // Get ingredients
     const ingredients = [];
 
     for (let i = 1; i <= 20; i++) {
@@ -128,34 +129,77 @@ async function showRecipe(id) {
       const measure = meal[`strMeasure${i}`];
 
       if (ingredient && ingredient.trim() !== "") {
-        ingredients.push(
-          `${measure ? measure.trim() : ""} ${ingredient.trim()}`,
-        );
+        ingredients.push(`
+          <li>
+            ${measure ? measure.trim() : ""} ${ingredient.trim()}
+          </li>
+        `);
       }
     }
 
+    // Format instructions
     const instructions = meal.strInstructions
       ? meal.strInstructions
-      : "Instructions are not available.";
+          .split(/\d+\.\s+/)
+          .filter((step) => step.trim() !== "")
+      : [];
 
+    const instructionHTML = instructions.length
+      ? instructions
+          .map(
+            (step, index) => `
+              <li>
+                <span>${step.trim()}</span>
+              </li>
+            `,
+          )
+          .join("")
+      : "<li>Instructions are not available.</li>";
+
+    // Show recipe
     recipe.style.display = "block";
-    recipe.innerHTML = `<div><b>${meal.strMeal}</b>
-             <img src="icons/cross.svg" alt="" class='cross-btn'>
-            </div> 
-            <ul>
-                <li><b>Category:</b> ${meal.strCategory || "N/A"}</li>
-                <li><b>Cuisine:</b> ${meal.strArea || "N/A"}</li>
-                <li><b>Ingredients:</b>\n${ingredients.join("\n")}</li>
-                <li><b>Instructions:</b>\n${instructions}</li>
-            </ul>`;
+
+    recipe.innerHTML = `
+      <div class="recipe-header">
+        <b>${meal.strMeal}</b>
+        <img 
+          src="icons/cross.svg" 
+          alt="Close recipe" 
+          class="cross-btn"
+        >
+      </div>
+
+      <img 
+        src="${meal.strMealThumb}" 
+        alt="${meal.strMeal}"
+        class="recipe-detail-image"
+      >
+
+      <ul class="recipe-details">
+        <li><b>Category:</b> ${meal.strCategory || "N/A"}</li>
+        <li><b>Cuisine:</b> ${meal.strArea || "N/A"}</li>
+      </ul>
+
+      <h3>Ingredients</h3>
+
+      <ul class="ingredients">
+        ${ingredients.join("")}
+      </ul>
+
+      <h3>Instructions</h3>
+
+      <ol class="instructions">
+        ${instructionHTML}
+      </ol>
+    `;
+
+    // Close recipe
     document.querySelector(".cross-btn").addEventListener("click", () => {
       recipe.style.display = "none";
     });
-    console.log(instructions);
 
   } catch (error) {
     console.error("Error:", error);
-
     alert("Unable to load this recipe. Please try again.");
   }
 }
