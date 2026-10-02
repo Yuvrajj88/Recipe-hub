@@ -31,6 +31,9 @@ input {
     font: inherit;
 }
 
+header{
+    display: flex;
+}
 .container {
     width: min(1180px, 92%);
     margin: 0 auto;
@@ -39,7 +42,10 @@ input {
 .section {
     padding: 90px 0;
 }
-
+.logo-search{
+    display: flex;
+    justify-content: space-between;
+}
 
 /* 
    NAVBAR
@@ -56,7 +62,7 @@ input {
 
 .navbar {
     min-height: 78px;
-    display: flex;
+    
     align-items: center;
     gap: 30px;
 }
@@ -69,9 +75,10 @@ input {
     font-weight: 800;
     color: #292522;
     white-space: nowrap;
+    margin-right: 10px;
 }
 
-.logo > span:not(.logo-icon) {
+.logo span:nth-child(3) {
     color: #e85d04;
 }
 
@@ -121,7 +128,7 @@ input {
 
 .search-box {
     height: 44px;
-    width: 270px;
+    flex-grow: 1;
     display: flex;
     align-items: center;
     background: #ffffff;
@@ -177,7 +184,7 @@ input {
     position: fixed;
     display: flex;
     right: 10vw;
-    top: 15vh;
+    top: 20vh;
     width: 80vw;
     max-height: 70vh;
     z-index: 5;
@@ -655,7 +662,7 @@ input {
     .navbar {
         flex-wrap: wrap;
         padding: 15px 0;
-        gap: 15px 25px;
+        gap: 5px 25px;
     }
 
     .nav-links {
@@ -664,7 +671,7 @@ input {
         justify-content: center;
         margin: 0;
     }
-
+    
     .search-box {
         margin-left: auto;
     }
@@ -705,11 +712,13 @@ input {
 
     .navbar {
         min-height: auto;
-        padding: 13px 0;
+        padding: 7px 0;
     }
-
+    .logo span:nth-child(2), span:nth-child(3) {
+        display: none;
+    }
     .logo {
-        font-size: 22px;
+        font-size: 20px;
     }
 
     .search-box {
@@ -721,7 +730,7 @@ input {
     .nav-links {
         order: 3;
         gap: 18px;
-        justify-content: flex-start;
+        justify-content: center;
         overflow-x: auto;
         padding: 2px 0 5px;
         scrollbar-width: none;
@@ -858,13 +867,18 @@ input {
    SMALL MOBILE
  */
 
-@media (max-width: 400px) {
+@media (max-width: 460px) {
 
     .container {
         width: 90%;
     }
+    .logo { 
+        font-size: 16px;
+    }
+    
 
     .nav-links {
+        display: none;
         gap: 15px;
     }
 
